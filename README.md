@@ -25,8 +25,8 @@ The material needed for this setup is:
 3. Setup The Things Network and Datacake
     3.5 Tried using Adafruit and read up on MQTT.
 4. Set up communications from Heltec ESP32 to The things Network and decode the data in Datacake
-5. Merge the sensor program and the communications <- Am here
-6. See to it that the correct data gets passed to Datacake
+5. Merge the sensor program and the communications
+6. See to it that the correct data gets passed to Datacake  <- Am here
 7. Set up a dashboard in datacake
 8. 3D print holder for Ultrasonic senors and breadboard to mount over door.
 9. Test setup.
