@@ -27,9 +27,18 @@ The material needed for this setup is:
 4. Set up communications from Heltec ESP32 to The things Network and decode the data in Datacake
 5. Merge the sensor program and the communications
 6.  Set up a dashboard in datacake
-7. See to it that the correct data gets passed to Datacake, add second Ultrasonic sensor  <- Am here
-8. 3D print holder for 2 Ultrasonic sensors and breadboard to mount over door.
-9. Test setup.
-10. Docker, with NodeRED, instead of datacake?
-11. Try RTOS, as in this project: https://github.com/per25/P1-HAN-port-with-lora
+7. See to it that the correct data gets passed to Datacake,
+8.  add second Ultrasonic sensor 
+9.  Switch from Datacake to NodeRED, set up NodeRED server at home.  <- Am here
+11. 3D print holder for 2 Ultrasonic sensors and breadboard to mount over door.
+12. Test setup.
+13. Docker, with NodeRED, instead of datacake?
+14. Try RTOS, as in this project: https://github.com/per25/P1-HAN-port-with-lora
+
+
+##3D Printed part
+100 mm high
+150 mm deep
+70 mm between sensors
+Holes 43 x 17 mm
 
