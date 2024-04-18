@@ -38,6 +38,7 @@ The material needed for this setup is:
 
 ##3D Printed part
 100 mm high
+130 mm wide
 150 mm deep
 70 mm between sensors
 Holes 43 x 17 mm
