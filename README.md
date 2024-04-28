@@ -143,17 +143,19 @@ This is the template posted to the website.
 "content":"Door openings: {{flow.doorOpenings}} \n People in office: {{flow.peoplePassing}} \n \n This data is send via LoRaWan and The Things Network. The data is decoded in NodeRED before it is posted to this site using the wordpress REST API. ",
 "status":"publish"
 ```
+The http request looks like this, following the instructions for the Wordpress REST API.
+![User](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/NodeRED_post.png)
 
 #### Wordpress website hosted on Digitalocean
 
 
 ### Finalizing the design
 
+I believe I have learned a lot about IoT networks communications during this project. There is definitely several possible ways to improve this project, but I'm happy with the proof of concept.
 
-
-I'm happy with the end result of this project but I haven't reached the end goal.
-
-To be continued...
+* Improve the accuracy of the ultrasonic counters. Likely possible to improve both the physical positioning and the signal processing.
+* Improve the
+* Implement a downlink reset command, to clear every night if something has gone wrong.
 
 ### References
 
