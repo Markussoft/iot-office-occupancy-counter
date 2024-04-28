@@ -128,7 +128,8 @@ To set the device up using LoRa and The Things Network follow the steps found in
 ### Visualisation and user interface
 
 #### NodeRED server hoted on local computer
-NodeRED is subscribed to an MQTT server at The Things Network.
+NodeRED is subscribed to an MQTT server at The Things Network. This requires setting up a username and password under the MQTT tab in The Things Network.
+These credentials then have to be entered in the MQTT tab in NodeRED.
 
 #### Wordpress website hosted on Digitalocean
 
@@ -142,3 +143,5 @@ I'm happy with the end result of this project but I haven't reached the end goal
 To be continued...
 
 ### References
+
+https://www.hostinger.in/tutorials/wordpress-rest-api
