@@ -151,11 +151,11 @@ The http request looks like this, following the instructions for the Wordpress R
 
 ### Finalizing the design
 
+I believe I have learned a lot about IoT networks communications during this project. There is definitely several possible ways to improve this project, but I'm happy with the proof of concept.
 
-
-I'm happy with the end result of this project but I haven't reached the end goal.
-
-To be continued...
+* Improve the accuracy of the ultrasonic counters. Likely possible to improve both the physical positioning and the signal processing.
+* Improve the
+* Implement a downlink reset command, to clear every night if something has gone wrong.
 
 ### References
 
