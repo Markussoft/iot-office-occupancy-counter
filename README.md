@@ -30,6 +30,7 @@ What needs to be included:
 - [ ] Short project overview
 - [ ] How much time it might take to do (an approximation)
 -->
+### Material
 
 The material needed for this setup is:
 
