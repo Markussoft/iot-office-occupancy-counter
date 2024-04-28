@@ -117,7 +117,6 @@ To get the physical setup in place we need to connect our vibration sensor and L
 + Connect one wire from **PIN10** on the board to pin **DO** (digital output)
 ##### 4. As power supply I used a power bank with **5V DC** connected with USB
 
-![IoT circuits](https://github.com/Raskelof/Talking-Stairs/blob/main/assets/sketch_circuits.png?raw=true)
 
 ### Platforms and infrastructure
 
@@ -125,7 +124,6 @@ As the device supports wireless communication using both WiFi and LoRA there are
 
 #### Cost
 
-The cost for using Helium could be free or at least very low depending on your usage. $0.0002 per day if you use one uplink every hour during the day. The hosting on Azure could more costly, while the web app is free if you go for the "Dev web app" the database has a minimum price of 128 SEK / month that would be sufficient for our requirements. I would recommend to facilitate any existing database and infrastructure you might have at hand because the requirements are very low as we are only using one table with limited reads and writes. Using the Azure trial / free tier would also give you 1 year of free services.
 
 
 ### The code
@@ -140,18 +138,10 @@ To set the device up using LoRa and The Things Network follow the steps found in
 
 ???
 
-When you have your device set up in The Things Network you also need to provide the following configuration in the `config.json` file.
-
-```js
-"dev_eui": "x",
-"app_eui": "x",
-"app_key": "x"
-```
-
 ### Visualisation and user interface
 
 #### NodeRED server hoted on local computer
-NodeRED is subsribed to an MQTT server at The Things Network.
+NodeRED is subscribed to an MQTT server at The Things Network.
 
 #### Wordpress website hosted on Digitalocean
 
