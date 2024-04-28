@@ -129,7 +129,20 @@ To set the device up using LoRa and The Things Network follow the steps found in
 
 #### NodeRED server hoted on local computer
 NodeRED is subscribed to an MQTT server at The Things Network. This requires setting up a username and password under the MQTT tab in The Things Network.
-These credentials then have to be entered in the MQTT tab in NodeRED.
+These credentials then have to be entered in the MQTTin node in NodeRED.
+
+![NodeRED](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/NodeRED_flow.png)
+
+![User](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/NodeRED_MQTTuser.png)
+
+This is the template posted to the website.
+```javascript=
+"message":"test",
+"title":"Office Occupancy Counter",
+"excerpt":"Door openings: {{flow.doorOpenings}} \n People in office: {{flow.peoplePassing}} ",
+"content":"Door openings: {{flow.doorOpenings}} \n People in office: {{flow.peoplePassing}} \n \n This data is send via LoRaWan and The Things Network. The data is decoded in NodeRED before it is posted to this site using the wordpress REST API. ",
+"status":"publish"
+```
 
 #### Wordpress website hosted on Digitalocean
 
