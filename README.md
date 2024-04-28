@@ -144,10 +144,14 @@ This is the template posted to the website.
 "status":"publish"
 ```
 The http request looks like this, following the instructions for the Wordpress REST API.
+
 ![User](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/NodeRED_post.png)
 
 #### Wordpress website hosted on Digitalocean
 
+The result is that the only post is updated:
+
+![Markussoft](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/Markusoft.png)
 
 ### Finalizing the design
 
