@@ -53,19 +53,6 @@ What needs to be included:
 - [ ] How much time it might take to do (an approximation)
 -->
 
-### Objectives
-
-
-<!--
-Describe why you have chosen to build this specific device. What purpose does it serve? What do you want to do with the data, and what new insights do you think it will give?
-
-- [ ] Why you chose the project
-- [ ] What purpose does it serve
-- [ ] What insights you think it will give
--->
-
-### Material
-
 The material needed for this setup is:
 
 * HELTEC Wifi LoRa 32 V3, ESP32 microcontroller.
