@@ -59,6 +59,12 @@ This project was programmed in Arduino and to get you started you will need to s
  + Connect the Heltec board to your computer using a USB-C cable
  + The Heltec docs were a very good help https://docs.heltec.org/en/node/esp32/quick_start.html
 
+#### LoRaWAN Library
+The library included in the Heltec Board I fould very complicated, if forced the chip to go inte deep sleep between sending to function correctly.
+This library was much easier to use. https://www.arduino.cc/reference/en/libraries/lorawan_esp32/
+
+![LoraWAN](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/Arduino_LoRaWAN_esp32.png)
+
 ### Putting everything together
 
 To get the physical setup in place we need to connect our vibration sensor and LoRa antenna. To make things a little bit easier I used a breadboard to connect the circuits. 
@@ -67,16 +73,10 @@ To get the physical setup in place we need to connect our vibration sensor and L
 
 ##### 1. Disconnect any power supply (computer or battery)
 ##### 2. Connect LoRa antenna
-##### 3. Connect vibration sensor
-+ Connect one wire from **5V** on the board to pin **VCC** on the sensor 
-+ Connect one wire from **GND** on the board to pin **GND** o the sensor
-+ Connect one wire from **PIN10** on the board to pin **DO** (digital output)
-##### 4. As power supply I used a power bank with **5V DC** connected with USB
-
+##### 3. Connect ??? sensor
 
 ### Platforms and infrastructure
 
-As the device supports wireless communication using both WiFi and LoRA there are two ways to connect the device to the internet. Both the database and the web server is hosted on the **Azure** Platform so if you use WiFi these are the services required to be set up. If you instead want to use LoRa you also need to set up a **Helium** account and configure your device and integration. Read more about the platform setup under "The physical network layer".
 
 #### Cost
 
@@ -95,7 +95,8 @@ To set the device up using LoRa and The Things Network follow the steps found in
 ???
 
 ### Visualisation and user interface
-
+There are several ways to do this, but using NodeRED was a nice experience. I host a NodeRED server on a server in my apartment. NodeRED is running inside a virtual Debian machine, which is in turn hosted on Proxmox.
+The website is hosted on DigitalOcean using one of their Wordpress droplets. I bough a domain on Hover and got the DNS settings sorted out.
 #### NodeRED server hoted on local computer
 NodeRED is subscribed to an MQTT server at The Things Network. This requires setting up a username and password under the MQTT tab in The Things Network.
 These credentials then have to be entered in the MQTTin node in NodeRED.
@@ -132,4 +133,7 @@ I believe I have learned a lot about IoT networks communications during this pro
 
 ### References
 https://docs.heltec.org/en/node/esp32/quick_start.html
+
+https://www.arduino.cc/reference/en/libraries/lorawan_esp32/
+
 https://www.hostinger.in/tutorials/wordpress-rest-api
