@@ -17,11 +17,9 @@ A counter keeps track of how many people are in the office. When the last person
 
 
 ### Objectives
-The counter should be standalone, battery operated and wireless. To keep track of the number of people passing it will feature a laser tripwire that is setup over the only entrance to the office. To save battery and not have the laser on all the time I believe it may be neccessary to have a separate sensor, likely magnetic or sound, that keeps track of when the door is opened and then starts the laser. To keep track of if a person is leaving or entering an ultrasonic sensor will be used to check if the person breaking the beam is moving away from the door of towards it (from the inside).
+The counter should be standalone, battery operated and wireless. To keep track of the number of people passing it will use ultrasonic sensors and be mounted over the doorway that is the only entrance to the office. Both to save battery (by not running the ultrasonic sensors all the time) and to count door openings, a Reed sensor is used to detect if the door is opened. To keep track of if a person is leaving or entering there are two ultrasonic sensors. By keeping track of which of them is reached first the direction of movement can be deducted.
 
-Optionally I will not use the laser sensor and rely solely on the ultrasonic sensor. If possible some processing can be done on the server and then sent back to the sensor.
-
-A subobjective of this project is to learn more about LoRaWAN, which means the sensor will report the data via LoRaWAN to a web interface where you can check how many people are in the office and how many times the door has been opened. It will also show the number of people on the display.
+A subobjective of this project is to learn more about LoRaWAN, which means the sensor will report the data via LoRaWAN to a web interface where you can check how many people are in the office and how many times the door has been opened.
 
 <!---
 Give a short and brief overview of what your project is about.
@@ -38,8 +36,9 @@ The material needed for this setup is:
 * HELTEC Wifi LoRa 32 V3, ESP32 microcontroller.
 * 2x ultrasonic distance sensors
 * Reed sensor
-* Ultrasonic distance sensor 
 * Sensecap M2 LoraWAN Indoor Gateway
+* Battery
+* 
 
 | Product | Where to buy | Description | Price |
 | --------- | ---------------- | ---------------- | ----------------: |
@@ -55,20 +54,10 @@ The material needed for this setup is:
 
 This project was programmed in Arduino and to get you started you will need to set up the environment.
 
-##### 1. Install drivers
+### 1. Install drivers and Arudino IDE
 
- + Connect the Heltec board to your computer using a USB to micro USB cable
- + Download drivers and install preferred version from https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip
-
-##### 3. Install IDE on computer
-
- + For this project I ended up using Thonny for development which is lightweight IDE for microcontrollers but I would suggest you try using either VS Code or Atom with the PyMakr plugin installed. I had some stability issues uploading new code when I used VS Code with PyMakr but it's definitely a more modern setup. You can download Thonny from here: https://thonny.org/
-
-##### 4. Verify your installation
-
- + Open Thonny and hit the stop/restart button. You should se the following statement when the device boots up 
- > Pycom MicroPython 1.20.2.r4 [v1.20.1.r2-392-g172cf5d0-dirty] on 2021-01-19; Heltec Wireless Stick with ESP32
-
+ + Connect the Heltec board to your computer using a USB-C cable
+ + The Heltec docs were a very good help https://docs.heltec.org/en/node/esp32/quick_start.html
 
 ### Putting everything together
 
@@ -142,5 +131,5 @@ I believe I have learned a lot about IoT networks communications during this pro
 * Implement a downlink reset command, to clear every night if something has gone wrong.
 
 ### References
-
+https://docs.heltec.org/en/node/esp32/quick_start.html
 https://www.hostinger.in/tutorials/wordpress-rest-api
