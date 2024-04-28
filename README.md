@@ -143,6 +143,8 @@ This is the template posted to the website.
 "content":"Door openings: {{flow.doorOpenings}} \n People in office: {{flow.peoplePassing}} \n \n This data is send via LoRaWan and The Things Network. The data is decoded in NodeRED before it is posted to this site using the wordpress REST API. ",
 "status":"publish"
 ```
+The http request looks like this, following the instructions for the Wordpress REST API.
+![User](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/NodeRED_post.png)
 
 #### Wordpress website hosted on Digitalocean
 
