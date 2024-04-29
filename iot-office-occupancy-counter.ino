@@ -78,7 +78,7 @@ uint8_t LoraPayload[] = { 0x06, 0x07, 0x08, 0x09};
 //int reed_changes = 0;
 volatile int reed_changes;
 volatile int IR_changes;
-int door_openings;
+int door_openings = 1; //door_openings starts at 1 to get the correct reportning over LoRaWAN.
 int person_in = 0;
 int person_out = 0;
 int persons_office = 0;
@@ -117,7 +117,7 @@ void drawFontFaceDemo() {
   // create more fonts at http://oleddisplay.squix.ch/
   display.setTextAlignment(TEXT_ALIGN_LEFT);
   display.setFont(ArialMT_Plain_10);
-  display.drawString(0, 0, "# of door openings: " + String(door_openings));
+  display.drawString(0, 0, "# of door openings: " + String(door_openings-1)); //door_openings need tp be -1 due to program flow.
   //display.setFont(ArialMT_Plain_10);
   display.drawString(0, 12, "Distance1 [cm]: " + String(distance1));
   display.drawString(0, 24, "Distance2 [cm]: " + String(distance2));
@@ -151,7 +151,11 @@ void IRAM_ATTR revCounter() {
   reed_time = millis();
   if (reed_time - last_reed_time > 250) {
     reed_changes++;
-    door_openings = reed_changes / 2;
+    if (reed_changes == 2){
+      door_openings++;
+      reed_changes=0;
+    }
+    //door_openings = reed_changes / 2;
     last_reed_time = reed_time;
   }
 }
@@ -191,9 +195,10 @@ void setup() {
   pinMode(trigPin2, OUTPUT);  // Sets the trigPin as an Output
   pinMode(echoPin2, INPUT);   // Sets the echoPin as an Input
   Serial.begin(9600);         // Starts the serial communication
+  persons_office = 0;
 
   //Add interrupt tp reedPin to count door openings
-  attachInterrupt(reedPin, revCounter, FALLING);
+  attachInterrupt(reedPin, revCounter, RISING);
 
   //Serial.begin(115200);
   //Serial.println();
@@ -230,9 +235,8 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   reedState = digitalRead(reedPin);
 
-
-  //reedState == Low when there is no magnetic fiels, i.e. when the door is open.
-  if (reedState == LOW) {
+  //reedState == Low when there is a magnetic field, i.e. when the door is closed. High when door is open.
+  if (reedState == HIGH) {
     // turn LED on:
     digitalWrite(ledPin, HIGH);
     //Also run the distance sensor while button pushed
@@ -279,6 +283,11 @@ void loop() {
 
         last_UV_time = UV_time;
         persons_office = person_in - person_out;
+
+        //Correct errors if too low.
+        if (persons_office < 0){
+          persons_office = 0;
+        }
         Serial.println(persons_office);
         //Serial.println(person_in);
         //Serial.println(person_out);
@@ -308,7 +317,7 @@ void loop() {
 	//nb += 0.1;
 	//lpp.reset();
 	//lpp.addTemperature(1, nb);
-  LoraPayload[0] = door_openings;
+  LoraPayload[0] = door_openings; 
   LoraPayload[1] = persons_office;
   ttn.sendBytes(LoraPayload,appDataSize);
 	if (ttn.sendBytes(lpp.getBuffer(), lpp.getSize()))
