@@ -138,3 +138,5 @@ https://docs.heltec.org/en/node/esp32/quick_start.html
 https://www.arduino.cc/reference/en/libraries/lorawan_esp32/
 
 https://www.hostinger.in/tutorials/wordpress-rest-api
+
+https://www.sensingthecity.com/detecting-movement-direction-with-two-ultrasonic-distance-sensors/
