@@ -74,7 +74,7 @@ To get the physical setup in place we need to connect our vibration sensor and L
 
 ##### 1. Disconnect any power supply (computer or battery)
 ##### 2. Connect LoRa antenna
-##### 3. Connect ??? sensor
+##### 3. Connect Reed and ultrasonic sensors
 
 ### Platforms and infrastructure
 
@@ -91,9 +91,9 @@ To get the physical setup in place we need to connect our vibration sensor and L
 
 #### Setting up communication using LoRa with The Things Network
 
-To set the device up using LoRa and The Things Network follow the steps found in this guide
+To set the device up using LoRa and The Things Network there is a good Lecture to watch that was made for Applied IoT at Linnaeus University.
 
-???
+[Lecture 07 - Long-Range Connectivity with LoRaWAN](https://www.youtube.com/watch?v=fTpWrwiRjQE&list=PL70wNv4dBdJxh0lJjnLlQjqh9rshaht6X&index=23)
 
 ### Visualisation and user interface
 There are several ways to do this, but using NodeRED was a nice experience. I host a NodeRED server on a server in my apartment. NodeRED is running inside a virtual Debian machine, which is in turn hosted on Proxmox.
@@ -140,3 +140,5 @@ https://www.arduino.cc/reference/en/libraries/lorawan_esp32/
 https://www.hostinger.in/tutorials/wordpress-rest-api
 
 https://www.sensingthecity.com/detecting-movement-direction-with-two-ultrasonic-distance-sensors/
+
+https://www.youtube.com/watch?v=fTpWrwiRjQE&list=PL70wNv4dBdJxh0lJjnLlQjqh9rshaht6X&index=23
