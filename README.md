@@ -58,13 +58,21 @@ This library was much easier to use. https://www.arduino.cc/reference/en/librari
 
 ### Putting everything together
 
-To get the physical setup in place we need to connect our vibration sensor and LoRa antenna. To make things a little bit easier I used a breadboard to connect the circuits. 
+To get the physical setup in place we need to connect our sensors and LoRa antenna. To make things a little bit easier I used a breadboard to connect the circuits. 
 
 #### Steps
 
 ##### 1. Disconnect any power supply (computer or battery)
 ##### 2. Connect LoRa antenna
 ##### 3. Connect Reed and ultrasonic sensors
+##### 4. 3D print enclosure, see STL files
+##### 5. Mount components in enclosure
+##### 6. Connect to computer and load the program
+
+![enclosure](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/enclosure.jpg)
+
+![enclosure_lid](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/enclosure_lid.jpg)
+
 
 ### Platforms and infrastructure
 See the following slide that shows the technology stack.
