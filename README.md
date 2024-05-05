@@ -67,13 +67,11 @@ To get the physical setup in place we need to connect our vibration sensor and L
 ##### 3. Connect Reed and ultrasonic sensors
 
 ### Platforms and infrastructure
-
+See the following slide that shows the technology stack.
+![Technology stack](https://github.com/Markussoft/iot-office-occupancy-counter/blob/main/Assets/Technology_stack.pdf)
 
 ### The code
-
-
-### The physical network layer
-
+See iot-office-occupancy-counter.ino
 
 #### Setting up communication using LoRa with The Things Network
 
