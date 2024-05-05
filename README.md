@@ -39,17 +39,7 @@ The material needed for this setup is:
 * Reed sensor
 * Sensecap M2 LoraWAN Indoor Gateway
 * Battery
-* 
-
-| Product | Where to buy | Description | Price |
-| --------- | ---------------- | ---------------- | ----------------: |
-| NodeMCU ESP32 Heltec | [link](https://www.amazon.se/dp/B08243JHMW?ref_=pe_24982401_518009621_302_E_DDE_dt_1) | Microcontroller supporting WiFi and Lora. Built in OLED display. | 350SEK |
-| Vibration sensor high sensitivity | [link](https://www.electrokit.com/produkt/vibrationssensor-hog-kanslighet/) | Measures vibration through digital output | 42SEK |
-| Jumper wires male-male | [link](https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hane-hane/) | Wires to connect the circuits | 49SEK |
-| Jumper wires female-male | [link](https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hona-hane/) | Wires to connect the circuits | 49SEK |
-| USB to Micro USB cable | [link](https://www.kjell.com/se/produkter/kablar-kontakter/usb-kablar/linocell-micro-usb-kabel-svart-05-m-p93424?gclid=Cj0KCQiAsdKbBhDHARIsANJ6-jdFMu6K6bP9FJbrX_VwUeSgRLyFK9sPdiU4-TL19HrHKeCEr88ER2IaAqSyEALw_wcB&gclsrc=aw.ds) | Cable to program the device | 110SEK |
-| Battery | [link](https://www.kjell.com/se/produkter/el-verktyg/laddare/mobilladdare/powerbank/linocell-powerbank-10000-mah-p89256) | Power supply | 199SEK |
-| Breadboard | [link](https://sizable.se/P.TVY7M/Kopplingsdack-med-830-punkter) | Breadboard to connect device and sensor during development | 59SEK |
+* Breadboard and jumper wires
 
 ### Environment setup
 
@@ -77,10 +67,6 @@ To get the physical setup in place we need to connect our vibration sensor and L
 ##### 3. Connect Reed and ultrasonic sensors
 
 ### Platforms and infrastructure
-
-
-#### Cost
-
 
 
 ### The code
